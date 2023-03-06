@@ -1,38 +1,827 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  font: small-caps 17px/1 sans-serif;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.fontStyle {
+  font: small-caps bold 17px/1 sans-serif;
+}
+
+/* Header style */
+
+.headerStyle {
+  border: 1.5px solid;
+  padding: 1.5rem;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.nav {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+}
+
+.siteTitle {
+  font-size: 1.5rem;
+}
+
+.nav a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.buttonHeader {
+  border-radius: 8px;
+  border: 1px solid rgb(100, 100, 100);
+  padding: 8px 18px;
+  transition-duration: 0.4s;
+}
+
+.buttonHeader:hover {
+  border-radius: 8px;
+  padding: 8px 18px;
+  transition-duration: 0.4s;
+  background-color: #5161f1;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 573px) {
+
+  .headerStyle {
+    border: 1.5px solid;
+    padding: 1.5rem;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .main {
+    flex: 1 0 auto;
+  }
+
+  .nav {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .siteTitle {
+    font-size: 1.5rem;
+  }
+
+  .nav a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .buttonHeader {
+    border-radius: 8px;
+    border: 1px solid rgb(100, 100, 100);
+    padding: 8px 18px;
+    transition-duration: 0.4s;
+  }
+
+  .buttonHeader:hover {
+    border-radius: 8px;
+    padding: 8px 18px;
+    transition-duration: 0.4s;
+    background-color: #5161f1;
+    color: white;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Footer style */
+.footer {
+  height: 50px;
+  flex-shrink: 0;
+  background-color: #565fe2eb;
+}
+
+.footerBar {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Sign-in page style */
+
+@media screen and (min-width: 321px) {
+  .loginContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
   }
-  to {
-    transform: rotate(360deg);
+
+  .avatar img {
+    height: 160px;
+    width: 160;
+    gap: 2rem;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  .inputBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inputLogin,
+  .inputLogin:focus,
+  .buttonSubmit,
+  .buttonSubmit:hover {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .inputLogin:focus {
+    background-color: rgba(226, 226, 226, 0.486);
+  }
+
+  .buttonSubmit {
+    border: 1px solid rgb(100, 100, 100);
+    transition-duration: 0.3s;
+  }
+
+  .buttonSubmit:hover {
+    transition-duration: 0.3s;
+    background-color: #5161f1;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .loginContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .avatar img {
+    height: 200px;
+    width: 200px;
+    gap: 2rem;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  .inputBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(131, 131, 131);
+  }
+
+  .inputLogin {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+
+  .inputLogin:focus {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background-color: rgba(226, 226, 226, 0.486);
+    border-radius: 5px;
+  }
+
+  .buttonSubmit {
+    border: 1px solid rgb(100, 100, 100);
+    transition-duration: 0.3s;
+  }
+
+  .buttonSubmit:hover {
+    transition-duration: 0.3s;
+    background-color: #5161f1;
+    color: white;
+  }
+}
+
+/* SpecificBook page style */
+
+.pageStructurSpecificBook {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.bookInfo {
+  display: flex;
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2%;
+  align-items: stretch;
+}
+
+.bookInfoImages {
+  display: flex;
+  flex-grow: 1;
+  margin: 1%;
+  padding: 5px;
+}
+
+.bookInfoAboutBook {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  margin: 1%;
+  padding: 5px;
+}
+
+.bookInfoDescription {
+  display: flex;
+  order: 5;
+  margin: 1%;
+  padding: 5px;
+}
+
+.orderInfo {
+  display: flex;
+  flex-basis: content;
+  border: 1px dashed;
+  height: fit-content;
+  margin: 1%;
+  gap: 10px;
+  padding: 5px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+td {
+  width: 150px;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+.buttonCount {
+  line-height: 40px;
+  width: 27px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  background-color: #565fe2;
+}
+
+#buttonPlus {
+  float: right;
+}
+
+.count {
+  font-size: 16px;
+  width: 48px;
+  height: 40px;
+  margin: 0;
+  text-align: center;
+  color: #000;
+  border: 1px solid #e6e6e6;
+  padding: 0;
+  display: inline-block;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.buttonAddtoCart {
+  border-radius: 8px;
+  border: 1px solid rgb(100, 100, 100);
+  padding: 8px 18px;
+  transition-duration: 0.4s;
+}
+
+.buttonAddtoCart:hover {
+  border-radius: 8px;
+  padding: 8px 18px;
+  transition-duration: 0.4s;
+  background-color: #5161f1;
+  color: white;
+}
+
+.paddingButton {
+  margin-top: 20px;
+}
+
+/* UserName list page style */
+.profilePage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 40px;
+}
+
+/* Book list page style */
+.pageContent {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  max-width: 450px;
+  background: linear-gradient(to right, rgb(33, 33, 33), rgb(0, 42, 255));
+  padding: 3px;
+  margin-left: 40px;
+}
+
+.searchBoxForm,
+input[type=text] {
+  display: flex;
+  justify-content: flex-end;
+  width: 440px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.searchBoxFilter {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  max-width: 450px;
+  background: linear-gradient(to right, rgb(0, 42, 255), rgb(33, 33, 33));
+  padding: 3px;
+  margin-left: 40px;
+}
+
+.filterByPrice {
+  display: flex;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  column-gap: 20px;
+}
+
+.imgSearch {
+  width: 30px;
+  height: 30px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.searchButton {
+  background-color: transparent;
+  border: none;
+}
+
+.output {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin: 30px;
+}
+
+.book {
+  display: flex;
+  gap: 10px 20px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 20px;
+  padding: 10px;
+}
+
+.book__summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookName {
+  width: 100%;
+  padding: 5px;
+}
+
+.book__image {
+  height: 380px;
+  width: 320px;
+}
+
+.book__title {
+  font-family: "Trirong", serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: justify;
+  padding: 10px 0px 10px 0px;
+  white-space: nowrap;
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book__author {
+  white-space: nowrap;
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book__actions {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 573px) {
+  .pageContent {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .searchBox {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    max-width: 450px;
+    background: linear-gradient(to right, rgb(33, 33, 33), rgb(0, 42, 255));
+    padding: 3px;
+    margin-left: 20px;
+  }
+
+  .searchBoxForm,
+  input[type=text] {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+
+  .searchBoxFilter {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    max-width: 450px;
+    background: linear-gradient(to right, rgb(0, 42, 255), rgb(33, 33, 33));
+    padding: 3px;
+    margin-left: 20px;
+  }
+
+  .filterByPrice {
+    display: flex;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    column-gap: 20px;
+  }
+
+  .imgSearch {
+    width: 30px;
+    height: 30px;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .searchButton {
+    background-color: transparent;
+    border: none;
+  }
+
+  .output {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin: 0;
+  }
+
+  .book {
+    display: flex;
+    gap: 10px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .book__summary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bookName {
+    padding: 5px;
+    width: 100%;
+  }
+
+  .book__image {
+    height: 380px;
+    width: 320px;
+  }
+
+  .book__title {
+    font-family: "Trirong", serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px 0px 10px 0px;
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .book__author {
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .book__actions {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Cart page style */
+
+@media screen and (min-width: 321px) {
+
+  .cartContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cartEmptyPng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .purchase,
+  .booksTotalPrice {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+  }
+
+  .cartIndicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 28px;
+    left: 3px;
+    background-color: rgb(255, 132, 0);
+    border-radius: 100%;
+    color: white;
+    height: 21px;
+    width: 21px;
+  }
+
+  .conteiner {
+    position: relative;
+  }
+
+  .booksForOrder {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0px 20px 20px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0px 15px 0px 15px;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+
+  .bookNameCart {
+    width: 50%;
+  }
+
+  .bookCount {
+    width: 40%;
+    padding-left: 5%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cartContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cartEmptyPng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .purchase,
+  .booksTotalPrice {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+  }
+
+  .cartIndicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 28px;
+    left: 3px;
+    background-color: rgb(255, 132, 0);
+    border-radius: 100%;
+    color: white;
+    height: 21px;
+    width: 21px;
+  }
+
+  .conteiner {
+    position: relative;
+  }
+
+  .booksForOrder {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0px 20px 20px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0px 15px 0px 15px;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+
+  .bookNameCart {
+    width: 50%;
+  }
+
+  .bookCount {
+    width: 40%;
+    padding-left: 5%;
+  }
+}
+
+/* This is a Error 404 page style */
+
+@media screen and (min-width: 1025px) {
+
+  .errorContent {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .error404Png {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .errorContent {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .error404Png {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .error404Png img {
+    height: 650px;
+    width: 900px;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .errorContent {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .error404Png {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .error404Png img {
+    height: 400px;
+    width: 560px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .errorContent {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .error404Png {
+    display: flex;
+    align-items: center;
+    margin: 20px 20px 20px 50px;
+  }
+
+  .error404Png img {
+    height: 250px;
+    width: 380px;
   }
 }
