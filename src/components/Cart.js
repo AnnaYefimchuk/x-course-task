@@ -39,7 +39,7 @@ function Cart() {
 
     const EmptyCart = () => (
         <div className="cartEmptyPng">
-            <img src={cartEmpty} alt="Cart empty..." />
+            <img className="cartEmptyPngImg" src={cartEmpty} alt="Cart empty..." />
         </div>
     )
 
@@ -50,7 +50,7 @@ function Cart() {
                 <div className="purchase">
                     <button className="buttonSubmit fontStyle" type="submit" disabled={disabledButton} onClick={() => { CleanCart() }} >Purchase</button>
                 </div>
-                {showCartEmpty ? <EmptyCart /> : null}
+                {showCartEmpty ? <EmptyCart/> : null}
                 {orderedBooks.map(orderedBook => (
                     <div className="booksForOrder" key={orderedBook.book.id}>
                         <div className="bookNameCart">

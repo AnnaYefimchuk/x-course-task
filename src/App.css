@@ -629,7 +629,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Cart page style */
 
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 1001px) {
 
   .cartContent {
     display: flex;
@@ -641,7 +641,73 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .cartEmptyPngImg {
+    width: 50%;
+  }
+
+  .purchase,
+  .booksTotalPrice {
+    display: flex;
+    justify-content: flex-end;
     margin: 20px;
+  }
+
+  .cartIndicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 28px;
+    left: 3px;
+    background-color: rgb(255, 132, 0);
+    border-radius: 100%;
+    color: white;
+    height: 21px;
+    width: 21px;
+  }
+
+  .conteiner {
+    position: relative;
+  }
+
+  .booksForOrder {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0px 20px 20px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0px 15px 0px 15px;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+
+  .bookNameCart {
+    width: 50%;
+  }
+
+  .bookCount {
+    width: 40%;
+    padding-left: 5%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cartContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cartEmptyPng {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cartEmptyPngImg {
+    width: 90%;
   }
 
   .purchase,
@@ -701,7 +767,10 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+  }
+
+  .cartEmptyPngImg {
+    width: 80%;
   }
 
   .purchase,

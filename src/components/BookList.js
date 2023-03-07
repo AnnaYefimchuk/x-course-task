@@ -32,6 +32,10 @@ function BookList() {
         setSearchValueByPrice(event.target.value);
     }
 
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    })
+
     return (
         <main className="main">
             <div className="pageContent">

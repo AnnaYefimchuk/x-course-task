@@ -12,6 +12,7 @@ import { Profile } from './components/Profile';
 import { RequireAuth } from './components/RequireAuth';
 import BooksContext, { BooksProvider } from "./context/use-books";
 import GetBooks from './components/GetBooks';
+import TestPage from './components/TestPage';
 
 function App() {
 

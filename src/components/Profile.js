@@ -8,7 +8,7 @@ export const Profile = () => {
         <main className="main">
             <div className="profilePage"> 
                 <p>Hello, {useLocalStorage("login", "")}</p>
-                <p>Have a god shoping! ^_^</p>
+                <p>Have a good shoping! ^_^</p>
             </div>
         </main>
     )

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import useLocalStorage, { removeSavedValue, getCartContents } from './useLocalStorage';
 import Cartsvg from './images/cart.svg';
 import Avatar from './images/avatar.png';
+import TestPage from './TestPage'
 
 function Header() {
 
