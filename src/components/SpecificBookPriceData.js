@@ -1,10 +1,10 @@
 import React from 'react';
-import { useState, useEffect, useMemo, useContext } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import useLocalStorage, { addToCart } from './useLocalStorage';
 
 function SpecificBookPriceData({ book }) {
 
-    const [inputValue, setInputValue] = useState(1); 1
+    const [inputValue, setInputValue] = useState(1);
 
     const increment = () => {
         setInputValue((c) => c + 1);

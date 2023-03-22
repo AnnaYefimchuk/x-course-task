@@ -1,10 +1,8 @@
 import React from 'react';
 import { Outlet, Link, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import useLocalStorage, { removeSavedValue, getCartContents } from './useLocalStorage';
 import Cartsvg from './images/cart.svg';
 import Avatar from './images/avatar.png';
-import TestPage from './TestPage'
 
 function Header() {
 
