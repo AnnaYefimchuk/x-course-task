@@ -1,9 +1,8 @@
 import React from 'react';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from 'react-router';
 import useLocalStorage, { setSavedValue } from './useLocalStorage';
-import logo from './images/avatar.png';
-
+import logo from '../images/avatar.png';
 
 function Signin() {
     const [user, setUser] = useState(useLocalStorage('login', ''));
@@ -15,9 +14,9 @@ function Signin() {
     function spaces(user) {
         var m = 0;
         for (var i = 0; i < user.length; i++)
-            if (user.charAt(i) == ' ')
+            if (user.charAt(i) === ' ')
                 m++;
-        return m == user.length;
+        return m === user.length;
     }
 
     function CheckUsername(user) {

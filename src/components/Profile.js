@@ -2,7 +2,6 @@ import React from "react";
 import useLocalStorage from './useLocalStorage';
 
 export const Profile = () => {
-    //const auth = useAuth();
 
     return (
         <main className="main">

@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import BooksContext from "../context/use-books";
-import noFoundImg from './images/imageNotFound.png';
+import noFoundImg from '../images/imageNotFound.png';
 import SpecificBookPriceData from './SpecificBookPriceData'
 
 function SpecificBook() {
@@ -10,8 +10,7 @@ function SpecificBook() {
     const books = useContext(BooksContext);
 
     const { id } = useParams();
-    console.log(useParams())
-    // const { id } = this.props.match.params.id;
+
     let specificBook = null;
 
     for (const book of books) {

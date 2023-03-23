@@ -28,7 +28,7 @@ export function addToCart(book, count) {
     if (CartContents) {
         let objectContents = JSON.parse(CartContents);
         for (const object of objectContents) {
-            if (object.book.id === book.id) {
+            if (object.book.id == book.id) {
                 object.count += count;
                 localStorage.setItem('cart', JSON.stringify(objectContents));
                 return;
@@ -54,6 +54,3 @@ export function getCartContents() {
 export function removeCartContents(key) {
     localStorage.removeItem(key);
 }
-
-
-

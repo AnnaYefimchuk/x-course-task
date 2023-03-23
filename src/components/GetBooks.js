@@ -1,10 +1,8 @@
-
 import { useNavigate } from "react-router";
-import noFoundImg from './images/imageNotFound.png';
+import noFoundImg from '../images/imageNotFound.png';
 
 export default function GetBooks(props) {
 
-  //const books = useContext(BooksContext);
   const books = props.filteredBooks;
   const navigate = useNavigate();
 

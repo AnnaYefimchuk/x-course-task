@@ -15,7 +15,7 @@ function SpecificBookPriceData({ book }) {
     };
 
     useEffect(() => {
-        if (inputValue < 0) { setInputValue(0) };
+        if (inputValue < 1) { setInputValue(1) };
         if (inputValue > 42) { setInputValue(42) };
     }, [inputValue]);
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState, useContext } from "react";
 import GetBooks from './GetBooks';
 import BooksContext from "../context/use-books";
-import search from './images/pngegg.png';
+import search from '../images/pngegg.png';
 
 function BookList() {
 
@@ -19,9 +19,6 @@ function BookList() {
         for (const book of books) {
             if (book.title.toLowerCase().includes(searchValue.toLowerCase()) && (book.price >= searchValueByPriceObj.min) && (book.price <= searchValueByPriceObj.max)) {
                 filteredBooks.push(book);
-                console.log("found " + book.title + "; searchValue = " + searchValue);
-            } else {
-                console.log("not found");
             }
         }
         setFilteredBooks(filteredBooks);
@@ -44,7 +41,6 @@ function BookList() {
                     <form className="searchBoxForm" action="">
                         <input type="text" placeholder="what you are looking for?" onChange={(e) => setSearchValue(e.target.value)} value={searchValue} />
                         <img className="imgSearch" src={search} alt="search" />
-
                     </form>
                 </div>
 
@@ -57,7 +53,9 @@ function BookList() {
                     </select>
                 </div>
             </div>
-            <GetBooks filteredBooks={filteredBooks} />
+
+            {filteredBooks.length > 0 ? <GetBooks filteredBooks={filteredBooks} /> : <p className="output">Sorry, we have not nothing like this</p>}
+
         </main>
     );
 }
