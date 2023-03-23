@@ -5,6 +5,7 @@ import useLocalStorage, { setSavedValue } from './useLocalStorage';
 import logo from '../images/avatar.png';
 
 function Signin() {
+
     const [user, setUser] = useState(useLocalStorage('login', ''));
     const [disabledButton, setdisabledButton] = useState(true);
 
@@ -41,9 +42,9 @@ function Signin() {
     }
     const handleKeypress = e => {
         //it triggers by pressing the enter key
-      if (e.keyCode === 13) {
-        handleLogin();
-      }
+        if (e.keyCode === 13) {
+            handleLogin();
+        }
     };
 
     return (

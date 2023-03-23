@@ -10,6 +10,7 @@ import Cart from './components/Cart';
 import Error404 from './components/Error404';
 import { Profile } from './components/Profile';
 import { RequireAuth } from './components/RequireAuth';
+import { RequireNoAuth } from './components/RequireNoAuth';
 import BooksContext, { BooksProvider } from "./context/use-books";
 import GetBooks from './components/GetBooks';
 
@@ -48,9 +49,8 @@ function App() {
     <div className='app'>
       < Routes >
         <Route path="/" element={<Header />}>
-          <Route index element={<Signin />} />
           <Route path="cart" element={<RequireAuth><Cart /></RequireAuth>} />
-          <Route path="signin" element={<Signin />} />
+          <Route index path="signin" element={<RequireNoAuth><Signin /></RequireNoAuth>} />
           <Route path="username" element={<RequireAuth><Profile /></RequireAuth>} />
           <Route path="books/:id" element={<RequireAuth><BooksProvider value={items}><SpecificBook /></BooksProvider></RequireAuth>} />
           <Route path="*" element={<Error404 />} />
