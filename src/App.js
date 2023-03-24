@@ -49,8 +49,9 @@ function App() {
     <div className='app'>
       < Routes >
         <Route path="/" element={<Header />}>
+          <Route index element={<RequireNoAuth><Signin /></RequireNoAuth>} />
+          <Route path="signin" element={<RequireNoAuth><Signin /></RequireNoAuth>} />
           <Route path="cart" element={<RequireAuth><Cart /></RequireAuth>} />
-          <Route index path="signin" element={<RequireNoAuth><Signin /></RequireNoAuth>} />
           <Route path="username" element={<RequireAuth><Profile /></RequireAuth>} />
           <Route path="books/:id" element={<RequireAuth><BooksProvider value={items}><SpecificBook /></BooksProvider></RequireAuth>} />
           <Route path="*" element={<Error404 />} />
