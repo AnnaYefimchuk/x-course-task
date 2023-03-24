@@ -1,0 +1,247 @@
+/* Book list page style */
+.pageContent {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  
+  .searchBox {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    max-width: 450px;
+    background: linear-gradient(to right, rgb(33, 33, 33), rgb(0, 42, 255));
+    padding: 3px;
+    margin-left: 40px;
+  }
+  
+  .searchBoxForm,
+  input[type=text] {
+    display: flex;
+    justify-content: flex-end;
+    width: 440px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .searchBoxFilter {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    max-width: 450px;
+    background: linear-gradient(to right, rgb(0, 42, 255), rgb(33, 33, 33));
+    padding: 3px;
+    margin-left: 40px;
+  }
+  
+  .filterByPrice {
+    display: flex;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    column-gap: 20px;
+  }
+  
+  .imgSearch {
+    width: 30px;
+    height: 30px;
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  .searchButton {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .output {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin: 30px;
+  }
+  
+  .book {
+    display: flex;
+    gap: 10px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 20px;
+    padding: 10px;
+  }
+  
+  .book__summary {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bookName {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .book__image {
+    height: 380px;
+    width: 320px;
+  }
+  
+  .book__title {
+    font-family: "Trirong", serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px 0px 10px 0px;
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .book__author {
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .book__actions {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 573px) {
+    .pageContent {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    .searchBox {
+      display: flex;
+      flex-direction: row;
+      border-radius: 5px;
+      max-width: 450px;
+      background: linear-gradient(to right, rgb(33, 33, 33), rgb(0, 42, 255));
+      padding: 3px;
+      margin-left: 20px;
+    }
+  
+    .searchBoxForm,
+    input[type=text] {
+      display: flex;
+      justify-content: flex-end;
+      width: 300px;
+      background: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+  
+    .searchBoxFilter {
+      display: flex;
+      flex-direction: row;
+      border-radius: 5px;
+      max-width: 450px;
+      background: linear-gradient(to right, rgb(0, 42, 255), rgb(33, 33, 33));
+      padding: 3px;
+      margin-left: 20px;
+    }
+  
+    .filterByPrice {
+      display: flex;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      column-gap: 20px;
+    }
+  
+    .imgSearch {
+      width: 30px;
+      height: 30px;
+    }
+  
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  
+    .searchButton {
+      background-color: transparent;
+      border: none;
+    }
+  
+    .output {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      margin: 0;
+    }
+  
+    .book {
+      display: flex;
+      gap: 10px 20px;
+      border: 1px solid rgb(0, 0, 0);
+      margin: 20px;
+      padding: 10px;
+    }
+  
+    .book__summary {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .bookName {
+      padding: 5px;
+      width: 100%;
+    }
+  
+    .book__image {
+      height: 380px;
+      width: 320px;
+    }
+  
+    .book__title {
+      font-family: "Trirong", serif;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: justify;
+      padding: 10px 0px 10px 0px;
+      white-space: nowrap;
+      width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    .book__author {
+      white-space: nowrap;
+      width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    .book__actions {
+      display: flex;
+      padding-top: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }

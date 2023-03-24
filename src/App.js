@@ -1,18 +1,18 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import { useEffect, useState } from "react";
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Signin from './components/Signin';
-import SpecificBook from './components/SpecificBook';
-import BookList from './components/BookList';
-import Cart from './components/Cart';
-import Error404 from './components/Error404';
-import { Profile } from './components/Profile';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import Signin from './components/signin/Signin';
+import SpecificBook from './components/specificBook/SpecificBook';
+import BookList from './components/bookList/BookList';
+import Cart from './components/cart/Cart';
+import Error404 from './components/notFoundPage/Error404';
+import { Profile } from './components/profile/Profile';
 import { RequireAuth } from './components/RequireAuth';
 import { RequireNoAuth } from './components/RequireNoAuth';
 import BooksContext, { BooksProvider } from "./context/use-books";
-import GetBooks from './components/GetBooks';
+import GetBooks from './components/bookList/GetBooks';
 
 function App() {
 

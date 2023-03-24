@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from "react";
 import { useNavigate } from 'react-router';
-import useLocalStorage, { setSavedValue } from './useLocalStorage';
-import logo from '../images/avatar.png';
+import useLocalStorage, { setSavedValue } from '../useLocalStorage';
+import logo from '../../images/avatar.png';
+import './signin.css';
 
 function Signin() {
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import useLocalStorage, { getCartContents, removeCartContents } from './useLocalStorage';
-import cartEmpty from '../images/cartEmpty.png';
+import useLocalStorage, { getCartContents, removeCartContents } from '../useLocalStorage';
+import cartEmpty from '../../images/cartEmpty.png';
+import './cart.css';
 
 
 function Cart() {

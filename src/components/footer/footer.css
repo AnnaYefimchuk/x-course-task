@@ -1,0 +1,14 @@
+
+.footer {
+    height: 50px;
+    flex-shrink: 0;
+    background-color: #565fe2eb;
+  }
+  
+  .footerBar {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }

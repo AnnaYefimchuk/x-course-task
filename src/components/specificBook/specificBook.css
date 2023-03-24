@@ -1,0 +1,118 @@
+/* SpecificBook page style */
+
+.pageStructurSpecificBook {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .bookInfo {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2%;
+    align-items: stretch;
+  }
+  
+  .bookInfoImages {
+    display: flex;
+    flex-grow: 1;
+    margin: 1%;
+    padding: 5px;
+  }
+  
+  .bookInfoAboutBook {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    margin: 1%;
+    padding: 5px;
+  }
+  
+  .bookInfoDescription {
+    display: flex;
+    order: 5;
+    margin: 1%;
+    padding: 5px;
+  }
+  
+  .orderInfo {
+    display: flex;
+    flex-basis: content;
+    border: 1px dashed;
+    height: fit-content;
+    margin: 1%;
+    gap: 10px;
+    padding: 5px;
+  }
+  
+  table {
+    border-collapse: separate;
+    border-spacing: 10px;
+  }
+  
+  td {
+    width: 150px;
+  }
+  
+  td:last-child {
+    text-align: right;
+  }
+  
+  .buttonCount {
+    line-height: 40px;
+    width: 27px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    background-color: #565fe2;
+  }
+  
+  #buttonPlus {
+    float: right;
+  }
+  
+  .count {
+    font-size: 16px;
+    width: 48px;
+    height: 40px;
+    margin: 0;
+    text-align: center;
+    color: #000;
+    border: 1px solid #e6e6e6;
+    padding: 0;
+    display: inline-block;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  .buttonAddtoCart {
+    border-radius: 8px;
+    border: 1px solid rgb(100, 100, 100);
+    padding: 8px 18px;
+    transition-duration: 0.4s;
+  }
+  
+  .buttonAddtoCart:hover {
+    border-radius: 8px;
+    padding: 8px 18px;
+    transition-duration: 0.4s;
+    background-color: #5161f1;
+    color: white;
+  }
+  
+  .paddingButton {
+    margin-top: 20px;
+  }

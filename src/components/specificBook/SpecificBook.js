@@ -1,9 +1,10 @@
 import React from 'react';
 import { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import BooksContext from "../context/use-books";
-import noFoundImg from '../images/imageNotFound.png';
+import BooksContext from "../../context/use-books";
+import noFoundImg from '../../images/imageNotFound.png';
 import SpecificBookPriceData from './SpecificBookPriceData'
+import './specificBook.css';
 
 function SpecificBook() {
 

@@ -1,5 +1,6 @@
 import React from "react";
-import useLocalStorage from './useLocalStorage';
+import useLocalStorage from '../useLocalStorage';
+import './profile.css';
 
 export const Profile = () => {
 

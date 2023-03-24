@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect, useMemo } from 'react';
-import useLocalStorage, { addToCart } from './useLocalStorage';
+import useLocalStorage, { addToCart } from '../useLocalStorage';
 
 function SpecificBookPriceData({ book }) {
 

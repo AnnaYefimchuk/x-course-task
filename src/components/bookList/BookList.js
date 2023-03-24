@@ -1,8 +1,9 @@
 import React from 'react';
 import { useEffect, useState, useContext } from "react";
 import GetBooks from './GetBooks';
-import BooksContext from "../context/use-books";
-import search from '../images/pngegg.png';
+import BooksContext from "../../context/use-books";
+import search from '../../images/pngegg.png';
+import './bookList.css';
 
 function BookList() {
 
