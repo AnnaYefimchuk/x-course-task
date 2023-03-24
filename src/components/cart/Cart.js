@@ -47,7 +47,7 @@ function Cart() {
         <main className="main">
             <div className="cartContent">
                 <div className="purchase">
-                    <button className="buttonSubmit fontStyle" type="submit" disabled={disabledButton} onClick={() => { CleanCart() }} >Purchase</button>
+                    <button className="buttonSubmitCart fontStyle" type="submit" disabled={disabledButton} onClick={() => { CleanCart() }} >Purchase</button>
                 </div>
                 {showCartEmpty ? <EmptyCart/> : null}
                 {orderedBooks.map(orderedBook => (

@@ -26,27 +26,35 @@ function Header() {
         return countOrderedBooks;
     }
 
+    const login = useLocalStorage('login', '');
+
+    function HeaderMenu() {
+        return (
+            <ul>
+                <li>
+                    <Link to="/cart" className="conteiner"><img src={Cartsvg} alt="Cart" height="45" width="45"></img>
+                        <div className="cartIndicator">{CountOrderedBooks()}</div>
+                    </Link>
+                </li>
+                <li>
+                    <button className="buttonHeader fontStyle" type="submit" onClick={handleLogout}>Sign-out</button>
+                </li>
+                <li>
+                    <Link to="/username"><img src={Avatar} alt="Avatar" height="45" width="45"></img></Link>
+                </li>
+                <li>
+                    <Link to="/username">{useLocalStorage("login", "Guest")}</Link>
+                </li>
+            </ul>);
+    }
+
+
     return (
         <>
             <header className="headerStyle">
                 <nav className="nav">
                     <Link to="/books" className="siteTitle">JS BAND STORE / Anna Yefimchuk</Link>
-                    <ul>
-                        <li>
-                            <Link to="/cart" className="conteiner"><img src={Cartsvg} alt="Cart" height="45" width="45"></img>
-                                <div className="cartIndicator">{CountOrderedBooks()}</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <button className="buttonHeader fontStyle" type="submit" onClick={handleLogout}>Sign-out</button>
-                        </li>
-                        <li>
-                            <Link to="/username"><img src={Avatar} alt="Avatar" height="45" width="45"></img></Link>
-                        </li>
-                        <li>
-                            <Link to="/username">{useLocalStorage("login", "Guest")}</Link>
-                        </li>
-                    </ul>
+                    {!login ? null : HeaderMenu()}
                 </nav>
             </header>
             <Outlet />
