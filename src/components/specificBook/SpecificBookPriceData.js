@@ -1,10 +1,28 @@
 import React from 'react';
 import { useState, useEffect, useMemo } from 'react';
-import useLocalStorage, { addToCart } from '../useLocalStorage';
+import useLocalStorage, { getCartContents, addToCart } from '../useLocalStorage';
 
 function SpecificBookPriceData({ book }) {
+    const LIMIT_BOOKS = 42;
+    let count = 1;
+    let orderedBooks = getCartContents();
+    for (const object of orderedBooks) {
+        if (object.book.id === book.id) {
+            count = object.count;
+        }
+    }
 
-    const [inputValue, setInputValue] = useState(1);
+    const [inputValue, setInputValue] = useState(count);
+    const [info, setInfo] = useState();
+
+    useEffect(() => {
+        if (count + inputValue > LIMIT_BOOKS) {
+            setInfo(`You can't order more then ${LIMIT_BOOKS} books`);
+        } else {
+            setInfo("")
+        }
+    }, [count, inputValue])
+    
 
     const increment = () => {
         setInputValue((c) => c + 1);
@@ -18,6 +36,7 @@ function SpecificBookPriceData({ book }) {
         if (inputValue < 1) { setInputValue(1) };
         if (inputValue > 42) { setInputValue(42) };
     }, [inputValue]);
+
 
     const upCalcPrice = () => {
         return (inputValue * book.price).toFixed(2);
@@ -38,7 +57,6 @@ function SpecificBookPriceData({ book }) {
     const AddBookToCart = () => {
         addToCart(book, inputValue);
     }
-
 
     return (
         <div className="orderInfo">
@@ -62,6 +80,8 @@ function SpecificBookPriceData({ book }) {
                         <td className="fontStyle">Total price</td>
                         <td id="totalPrice"><p title="totalPrice">{totalPrice}</p></td>
                     </tr>
+
+                    {info}
 
                     <tr>
                         <td colSpan="2"><button className="buttonAddtoCart fontStyle paddingButton" type="submit" onClick={() => { AddBookToCart() }}>Add to cart</button>

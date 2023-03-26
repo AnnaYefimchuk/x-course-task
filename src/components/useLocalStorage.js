@@ -25,11 +25,15 @@ export default function useLocalStorage(key, initialValue) {
 
 export function addToCart(book, count) {
     const CartContents = localStorage.getItem('cart');
+    const MAX_COUNT_ORDERED_BOOK = 42;
     if (CartContents) {
         let objectContents = JSON.parse(CartContents);
         for (const object of objectContents) {
             if (object.book.id == book.id) {
                 object.count += count;
+                if (object.count > MAX_COUNT_ORDERED_BOOK) {
+                    object.count = MAX_COUNT_ORDERED_BOOK;
+                }
                 localStorage.setItem('cart', JSON.stringify(objectContents));
                 return;
             }
@@ -50,6 +54,7 @@ export function getCartContents() {
         return [];
     }
 }
+
 
 export function removeCartContents(key) {
     localStorage.removeItem(key);
